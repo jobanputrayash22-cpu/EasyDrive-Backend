@@ -70,7 +70,7 @@ app.UseSwaggerUI();
 
 app.UseCors("AllowReact");
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
