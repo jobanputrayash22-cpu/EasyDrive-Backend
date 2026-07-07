@@ -92,8 +92,7 @@ public async Task<IActionResult> AddCar([FromForm] CarDto dto)
             await dto.Image.CopyToAsync(stream);
         }
 
-        imagePath =
-            $"http://localhost:5194/carimages/{fileName}";
+       imagePath = $"{Request.Scheme}://{Request.Host}/carimages/{fileName}";
     }
 
     var car = new Car
